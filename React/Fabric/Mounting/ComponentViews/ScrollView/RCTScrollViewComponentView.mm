@@ -85,6 +85,7 @@ using namespace facebook::react;
   MAP_SCROLL_VIEW_PROP(minimumZoomScale);
   MAP_SCROLL_VIEW_PROP(scrollEnabled);
   MAP_SCROLL_VIEW_PROP(pagingEnabled);
+  //MAP_SCROLL_VIEW_PROP(pagingInterval);
   MAP_SCROLL_VIEW_PROP(pinchGestureEnabled);
   MAP_SCROLL_VIEW_PROP(scrollsToTop);
   MAP_SCROLL_VIEW_PROP(showsHorizontalScrollIndicator);
