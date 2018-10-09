@@ -132,6 +132,13 @@ public class ReactHorizontalScrollViewManager
     view.setPagingEnabled(pagingEnabled);
   }
 
+  @ReactProp(name = "pagingInterval")
+  public void setPagingInterval(ReactHorizontalScrollView view, float pagingInterval) {
+    // pagingInterval needs to be exposed as a float because of the Javascript interface.
+    DisplayMetrics screenDisplayMetrics = DisplayMetricsHolder.getScreenDisplayMetrics();
+    view.setPagingInterval((int) (pagingInterval * screenDisplayMetrics.density));
+  }
+
   /**
    * Controls overScroll behaviour
    */

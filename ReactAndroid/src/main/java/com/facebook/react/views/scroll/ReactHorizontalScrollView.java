@@ -59,6 +59,7 @@ public class ReactHorizontalScrollView extends HorizontalScrollView implements
   private @Nullable String mOverflow = ViewProps.HIDDEN;
   private boolean mDragging;
   private boolean mPagingEnabled = false;
+  private int mPagingInterval = 0;
   private @Nullable Runnable mPostTouchRunnable;
   private boolean mRemoveClippedSubviews;
   private boolean mScrollEnabled = true;
@@ -151,6 +152,10 @@ public class ReactHorizontalScrollView extends HorizontalScrollView implements
 
   public void setPagingEnabled(boolean pagingEnabled) {
     mPagingEnabled = pagingEnabled;
+  }
+
+  public void setPagingInterval(int pagingInterval) {
+    mPagingInterval = pagingInterval;
   }
 
   public void setDecelerationRate(float decelerationRate) {
@@ -350,6 +355,9 @@ public class ReactHorizontalScrollView extends HorizontalScrollView implements
   private int getSnapInterval() {
     if (mSnapInterval != 0) {
       return mSnapInterval;
+    }
+    if (mPagingInterval != 0) {
+      return mPagingInterval;
     }
     return getWidth();
   }
