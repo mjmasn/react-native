@@ -38,6 +38,7 @@ public:
   const Float minimumZoomScale {1.0};
   const bool scrollEnabled {true};
   const bool pagingEnabled {};
+  const int pagingInterval {};
   const bool pinchGestureEnabled {true};
   const bool scrollsToTop {true};
   const bool showsHorizontalScrollIndicator {true};
@@ -56,4 +57,3 @@ public:
 
 } // namespace react
 } // namespace facebook
-
